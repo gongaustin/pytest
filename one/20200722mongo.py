@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import pymongo
+#面向文档存储MongoDB
 
 #连接
 client = pymongo.MongoClient(host='120.24.241.113',port=27017)
@@ -10,7 +11,7 @@ db = client.test
 #指定集合
 connection = db.pymongo
 
-#对象
+#数据对象
 student={
     "name":"MissLee",
     "age":29
@@ -23,6 +24,8 @@ student={
 
 #查询大于($eq))或者小于($lt)的数据
 find = connection.find({"age": {"$lt":30}})
+
+# result = connection.aggregate({"$group":{"count":{"$sum":1}}})
 
 print (find)
 
