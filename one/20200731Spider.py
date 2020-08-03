@@ -4,7 +4,7 @@ import time
 
 def get_page(url):
     #设置浏览器代理
-    #设置登录正好的cookie
+    #设置登录账号的cookie
     headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36",
                "Cookie":"csstype=2; access=pc; cfrom=tx; txuid=9641233; txEncodeUid=btAkbswIFS; tx.com.cn=1745070272.36895.0000; JSESSIONID=9FFC6FB7F752DACD13CF37E29CA25950; Hm_lvt_0807807898758df58fac1b03d3aece54=1596164588,1596173124,1596424255; Hm_lpvt_0807807898758df58fac1b03d3aece54=1596424255"}
     #获取页面
