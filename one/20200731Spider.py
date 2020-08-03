@@ -23,7 +23,8 @@ def get_name(i):
     t = get_page("http://tx.com.cn/love/newpub/cs/pubIndex.do?sex=1&pn="+str(i))
     soup = BeautifulSoup(t, 'html.parser')
     for k in soup.find_all('div',class_= "seccontent2"):
-        print(k.text)
+        print(k.text.split("加好友.发消息.挠Ta.送礼物")[0])
+        print(k.text.split("加好友.发消息.挠Ta.送礼物")[1])
         for n in k.find_all('a'):
             if(n.text not in string):
                 print(n.text)
@@ -31,6 +32,6 @@ def get_name(i):
         print("--------------------------------------")
 
 
-for i in range(1,2):
+for i in range(1,1000):
     get_name(i)
     time.sleep(3)
