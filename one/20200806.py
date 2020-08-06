@@ -5,14 +5,14 @@ def drawSunFlower():
     color('red','yellow')
     begin_fill()
     while True:
-        forward(200)
-        left(170)
+        forward(300)
+        left(172)
         if abs(pos())<1:
             break
             end_fill()
             done()
-    clear()
-
+    Screen().exitonclick()
+# drawSunFlower()
 #########################################分割线#######################################################
 import turtle
 
@@ -31,7 +31,8 @@ def drawSnakeFn():
        turtle.pencolor("green")
        turtle.seth(-40)    # 前进的方向
        drawSnake(70, 80, 2, 15)
-       clear()
+       turtle.Screen().exitonclick()
+# drawSnakeFn()
 #########################################分割线#######################################################
 
 import turtle as t #turtle库是python的内部库，直接import使用即可
@@ -50,8 +51,9 @@ def draw_art():
     brad = t.Turtle() #创建一个Turtle的实例
     brad.shape('turtle') #形状是一个海归turtle，也可以是圆圈circle，箭头(默认)等等
 
-    brad.color("green") #海龟的颜色是红色red，橙色orange等
-    brad.speed('fast') #海龟画图的速度是快速fast，或者slow等
+    window.bgcolor("grey")
+    brad.color("orange") #海龟的颜色是红色red，橙色orange等
+    brad.speed('slow') #海龟画图的速度是快速fast，或者slow等
 
     for i in range(1,37): #循环36次
         draw_diamond(brad) #海龟画一个形状/花瓣，也就是菱形
@@ -62,4 +64,69 @@ def draw_art():
 
     window.exitonclick() #点击屏幕退出
 
+
 draw_art() #调用函数开始画图
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
