@@ -32,6 +32,16 @@ def get_name(i):
         print("--------------------------------------")
 
 
-for i in range(1,1000):
-    get_name(i)
-    time.sleep(3)
+# for i in range(1,1000):
+#     get_name(i)
+#     time.sleep(3)
+
+import requests
+r = requests.get('http://www.baidu.com')
+from bs4 import BeautifulSoup
+
+soup = BeautifulSoup(r.content, 'html.parser')
+
+
+
+print (soup.text)

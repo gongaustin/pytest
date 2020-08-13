@@ -52,8 +52,8 @@ def draw_art():
     brad.shape('turtle') #形状是一个海归turtle，也可以是圆圈circle，箭头(默认)等等
 
     window.bgcolor("grey")
-    brad.color("orange") #海龟的颜色是红色red，橙色orange等
-    brad.speed('slow') #海龟画图的速度是快速fast，或者slow等
+    brad.color("#FFFF00") #海龟的颜色是红色red，橙色orange等
+    brad.speed('fast') #海龟画图的速度是快速fast，或者slow等
 
     for i in range(1,37): #循环36次
         draw_diamond(brad) #海龟画一个形状/花瓣，也就是菱形
