@@ -27,12 +27,14 @@ print(a)
 
 
 def connect(sql):
-    test = db.connect('localhost','root','123','test')
+    test = db.connect(host='localhost',user='root',password='123',database='test',port=3306)
     cursor = test.cursor()   #创建游标
     cursor.execute(sql)      #执行
-    data = cursor.fetchmany(10)  #设置行数
+    data = cursor.fetchmany(6)  #设置行数
     for i in data:
         print(i[0])
+
+
 
 connect('select * from student')
 
