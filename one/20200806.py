@@ -12,7 +12,7 @@ def drawSunFlower():
             end_fill()
             done()
     Screen().exitonclick()
-# drawSunFlower()
+drawSunFlower()
 #########################################分割线#######################################################
 import turtle
 
@@ -52,7 +52,9 @@ def draw_art():
     brad.shape('turtle') #形状是一个海归turtle，也可以是圆圈circle，箭头(默认)等等
 
     window.bgcolor("grey")
+    #设施颜色（支持英文输入和十六进制）
     brad.color("#FFFF00") #海龟的颜色是红色red，橙色orange等
+    #输入速度
     brad.speed('fast') #海龟画图的速度是快速fast，或者slow等
 
     for i in range(1,37): #循环36次
@@ -65,8 +67,9 @@ def draw_art():
     window.exitonclick() #点击屏幕退出
 
 
-draw_art() #调用函数开始画图
+# draw_art() #调用函数开始画图
 
+a = 5
 
 
 

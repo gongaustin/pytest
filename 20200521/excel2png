@@ -1,0 +1,23 @@
+from PIL import ImageGrab
+import xlwings as xw
+
+
+# get_screenshot
+def excel_catch_screen(shot_excel, shot_sheetname):
+    app = xw.App(visible=True, add_book=False)  # 使用xlwings的app启动
+    wb = app.books.open(shot_excel)  # 打开文件
+    sheet = wb.sheets(shot_sheetname)  # 选定sheet
+    all = sheet.used_range  # 获取有内容的range
+    print(all.value)
+    all.api.CopyPicture()  # 复制图片区域
+    sheet.api.Paste()  # 粘贴
+    img_name = 'data'
+    pic = sheet.pictures[0]  # 当前图片
+    pic.api.Copy()  # 复制图片
+    img = ImageGrab.grabclipboard()  # 获取剪贴板的图片数据
+    img.save("D:\\Auto_folder\\" + img_name + ".png")  # 保存图片
+    pic.delete()  # 删除sheet上的图片
+    wb.close()  # 不保存，直接关闭
+    app.quit()
+
+excel_catch_screen("d:\\1.xlsx","3-01")

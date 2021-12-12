@@ -29,7 +29,7 @@ def get_name(i):
             if(n.text not in string):
                 print(n.text)
 
-        print("--------------------------------------")
+        print("-------------------")
 
 
 # for i in range(1,1000):
