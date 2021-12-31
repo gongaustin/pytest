@@ -53,8 +53,8 @@ def Image_Excel(APP_ID, API_KEY, SECRET_KEY):
 
 
 if __name__ == '__main__':
-    image_path = '/Users/mac/Downloads/1.jpg'
-    APP_ID = '25423250'
-    API_KEY = 'l0sqHUDI6OkRWUACHfwR5swg'
-    SECRET_KEY = 'I2WesZz3mTlRmww5oswKCWzMXLq682CC'
+    image_path = '/Users/mac/Downloads/pic'
+    APP_ID = '25423813'
+    API_KEY = 'A79hLXEWF771hqG0YreUxdQM'
+    SECRET_KEY = '06Z6XqkqN2vVvnD4nPjfWjQ8XbvR15Sk'
     Image_Excel(APP_ID, API_KEY, SECRET_KEY)
