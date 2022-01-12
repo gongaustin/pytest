@@ -5,7 +5,7 @@ import json
 conn = db.connect(host='127.0.0.1', user='root', passwd='123', db='test', charset='utf8')
 cursor = conn.cursor()
 
-sql = "select * from abc where area is null";
+sql = "select * from abc where area is null"
 cursor.execute(sql)
 
 data = cursor.fetchmany(1000)
