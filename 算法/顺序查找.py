@@ -38,3 +38,9 @@ def connect(sql):
 
 connect('select * from student')
 
+print('%.2f' % 5.23)  #浮点数保留两位小数
+print('%04d' % 3) #前面0占位符
+print("Name:%10s Age:%8d Height:%8.2f" % ('Austin',25,1.83676))   #打印测试
+
+for i in range(100):
+    print(i)
