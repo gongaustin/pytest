@@ -21,12 +21,15 @@ for i in data:
 
 
     js = json.loads(str_res)
-    area = js.get('result').get('att')
-    print(area)
-    update_sql = "update abc set area = " +"'"+ area + "'"+" where cellphone = " +"'"+ i[2] + "'"
-    print(update_sql)
+    #获取状态
+    status = js.get("success")
+    if(status == "1"):
+        area = js.get('result').get('att')
+        print(area)
+        update_sql = "update abc set area = " +"'"+ area + "'"+" where cellphone = " +"'"+ i[2] + "'"
+        print(update_sql)
 
-    cursor.execute(update_sql)
-    conn.commit()
+        cursor.execute(update_sql)
+        conn.commit()
 
 
