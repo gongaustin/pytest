@@ -16,6 +16,9 @@ def create_qrcode(info):
     img = qr.make(info)
     img.show()
 
-if __name__ == '__main__':
-    path = 'log_path.conf'
-    create_qrcode(read_info("log_path.conf"))
+def main():
+    info = read_info("log_path.conf")
+    create_qrcode(info)
+
+if __name__ == "__main__":
+    main()
