@@ -11,28 +11,11 @@ class FileEventHandler(FileSystemEventHandler):
         FileSystemEventHandler.__init__(self)
 
     def on_created(self, event):
-        if event.is_directory:
-            print("directory created:{0}".format(event.src_path))
-            print("文件夹被创建")
-        else:
-            create_qrcode()
-            print("file created:{0}".format(event.src_path))
-
-    def on_deleted(self, event):
-        if event.is_directory:
-            print("directory deleted:{0}".format(event.src_path))
-            print("文件夹被删除")
-        else:
-            print("file deleted:{0}".format(event.src_path))
+        create_qrcode()
 
     def on_modified(self, event):
-        if event.is_directory:
-            print("directory modified:{0}".format(event.src_path))
-            print("文件夹被修改")
-        else:
-            plt.close()
-            create_qrcode()
-            print("file modified:{0}".format(event.src_path))
+        create_qrcode()
+
 
 
 # 读取配置日志文件的路径
@@ -49,7 +32,10 @@ def read_log_info(log_path):
     f = open(log_path, 'r', encoding='utf-8')
     text = f.readlines()
     f.close()
-    return text[0]
+    if bool(text):
+        return text[0]
+    else:
+        return 'null'
 
 
 # 生成二维码并显示
@@ -65,20 +51,20 @@ def create_qrcode():
     img = qr.make(info)
     plt.imshow(img)
     plt.axis('off')  # 关掉坐标轴为 off
-    plt.draw()
     plt.show()
 
 
 if __name__ == "__main__":
     create_qrcode()
+    path = read_log_path()
     observer = Observer()
     event_handler = FileEventHandler()
-    path = read_log_path()
     observer.schedule(event_handler, path, True)
     observer.start()
     try:
         while True:
-            time.sleep(10)
-    except KeyboardInterrupt:
+            time.sleep(1)
+    except Exception as e:
+        print("Exception:"+str(e))
         observer.stop()
     observer.join()
