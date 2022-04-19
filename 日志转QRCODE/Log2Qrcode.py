@@ -5,6 +5,7 @@ import qrcode as qr
 import matplotlib.pyplot as plt
 
 
+
 ##监听类
 class FileEventHandler(FileSystemEventHandler):
     def __init__(self):
@@ -64,7 +65,6 @@ if __name__ == "__main__":
     try:
         while True:
             time.sleep(1)
-    except Exception as e:
-        print("Exception:"+str(e))
+    except KeyboardInterrupt:
         observer.stop()
     observer.join()

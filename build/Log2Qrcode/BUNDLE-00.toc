@@ -1,0 +1,3 @@
+([('Log2Qrcode',
+   '/Users/mac/Coding/公司项目/舆情开发/爬虫接口/pytest/dist/Log2Qrcode',
+   'EXECUTABLE')],)

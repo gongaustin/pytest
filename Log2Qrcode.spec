@@ -4,7 +4,7 @@
 block_cipher = None
 
 
-a = Analysis(['日志转QRCODE\\Log2Qrcode.py'],
+a = Analysis(['日志转QRCODE/Log2Qrcode.py'],
              pathex=[],
              binaries=[],
              datas=[],
@@ -33,8 +33,12 @@ exe = EXE(pyz,
           upx=True,
           upx_exclude=[],
           runtime_tmpdir=None,
-          console=True,
+          console=False,
           disable_windowed_traceback=False,
           target_arch=None,
           codesign_identity=None,
           entitlements_file=None )
+app = BUNDLE(exe,
+             name='Log2Qrcode.app',
+             icon=None,
+             bundle_identifier=None)
