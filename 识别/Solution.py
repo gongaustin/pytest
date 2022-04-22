@@ -5,19 +5,17 @@ relsult = [name for name in names if len(name) >= 3]
 print(relsult)
 
 
+class Student:
 
-class student:
-
-    def __init__(self, name, age, sex, className):
+    def __init__(self, name, age, sex, class_name):
         self.name = name
         self.age = age
         self.sex = sex
-        self.className = className
+        self.class_name = class_name
 
     def getName(self):
         return self.name
 
-
 if __name__ == "__main__":
-    s = student("austin",18,'男','电子商务')
+    s = Student("austin", 18, '男', '电子商务')
     print(s.getName())
