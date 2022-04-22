@@ -1,5 +1,5 @@
 names = ['gongjun', 'mrgong', 'misslee', 'abc']
-'''测试'''
+'''测试--循环高级用法'''
 relsult = [name for name in names if len(name) >= 3]
 
 print(relsult)
