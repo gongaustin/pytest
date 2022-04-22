@@ -1,16 +1,23 @@
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-class solution:
-    def hasCycle(self, head: ListNode) -> bool:
-        if not (head and head.next):
-            return False
-        slow = head
-        fast = head.next
-        while fast.next and fast.next.next:
-            if slow == fast:
-                return True
-            slow = slow.next
-            fast = fast.next.next
-        return False
+names = ['gongjun', 'mrgong', 'misslee', 'abc']
+'''测试'''
+relsult = [name for name in names if len(name) >= 3]
+
+print(relsult)
+
+
+
+class student:
+
+    def __init__(self, name, age, sex, className):
+        self.name = name
+        self.age = age
+        self.sex = sex
+        self.className = className
+
+    def getName(self):
+        return self.name
+
+
+if __name__ == "__main__":
+    s = student("austin",18,'男','电子商务')
+    print(s.getName())
